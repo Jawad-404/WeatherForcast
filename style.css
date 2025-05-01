@@ -1,17 +1,20 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: url('wolfgang-hasselmann-bR_-gllg7Bs-unsplash.jpg')  no-repeat center center fixed; 
+  background: url('wolfgang-hasselmann-bR_-gllg7Bs-unsplash.jpg') no-repeat center center fixed; 
   background-size: cover;
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
   z-index: 1;
+  padding: 20px;
+  box-sizing: border-box;
 }
-body::before{
+
+body::before {
   content: '';
   position: absolute;
   top: 0;
@@ -22,54 +25,97 @@ body::before{
   z-index: -1;
 }
 
+.container {
+  background-color: rgba(12, 12, 12, 0.495);
+  padding: clamp(15px, 5vw, 30px);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: clamp(20px, 5vw, 28px);
+  letter-spacing: 1px;
+}
+
+input[type="text"] {
+  padding: 10px;
+  width: 65%;
+  border-radius: 8px;
+  border: none;
+  font-size: clamp(14px, 4vw, 16px);
+  margin-right: 5px;
+  outline: none;
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  background-color: #00bcd4;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: clamp(14px, 4vw, 16px);
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0097a7;
+}
+
+.forecast {
+  margin-top: 25px;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.forecast h3 {
+  margin: 8px 0;
+  font-size: clamp(18px, 5vw, 22px);
+}
+
+.forecast h5 {
+  margin: 8px 0;
+  font-size: clamp(14px, 4vw, 16px);
+}
+
+
+
+
+/* Small devices (phones) */
+@media (max-width: 480px) {
   .container {
-    background-color: rgba(12, 12, 12, 0.495);
-    padding: 30px;
-    border-radius: 16px;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
-    text-align: center;
-    width: 90%;
-    max-width: 400px;
-  }
-
-  h1 {
-    margin-bottom: 20px;
-    font-size: 28px;
-    letter-spacing: 1px;
-  }
-
-  input[type="text"] {
-    padding: 10px;
-    width: 70%;
-    border-radius: 8px;
-    border: none;
-    font-size: 16px;
-    margin-right: 5px;
-    outline: none;
-  }
-
-  button {
-    padding: 10px 15px;
-    border: none;
-    background-color: #00bcd4;
-    color: white;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-  }
-
-  button:hover {
-    background-color: #0097a7;
-  }
-
-  .forecast {
-    margin-top: 25px;
+    width: 95%;
     padding: 15px;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
   }
+  
+  input[type="text"] {
+    width: 60%;
+  }
+  
+  button {
+    padding: 10px;
+  }
+  
+  .forecast {
+    padding: 10px;
+  }
+}
 
-  .forecast h3, .forecast h5 {
-    margin: 8px 0;
+/* Medium devices (tablets) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .container {
+    width: 85%;
   }
+}
+
+/* Large devices (laptops/desktops) */
+@media (min-width: 769px) {
+  .container {
+    width: 80%;
+  }
+}
