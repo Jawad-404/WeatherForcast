@@ -1,15 +1,26 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: url('wolfgang-hasselmann-bR_-gllg7Bs-unsplash.jpg') no-repeat center center fixed;; 
+  background: url('wolfgang-hasselmann-bR_-gllg7Bs-unsplash.jpg')  no-repeat center center fixed; 
   background-size: cover;
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  position: relative;
+  z-index: 1;
 }
-
+body::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(111, 106, 106, 0.5); /* Black with 50% opacity */
+  z-index: -1;
+}
 
   .container {
     background-color: rgba(12, 12, 12, 0.495);
