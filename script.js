@@ -6,9 +6,8 @@ const cityTime=document.getElementById('time');
 const cityTemp=document.getElementById('temp');
 
 async function getData(cityName){
-    const promise=await fetch(`http://api.weatherapi.com/v1/current.json?key=d578a993838b4c068f970157250105&q=${cityName}&aqi=yes`);
+    const promise=await fetch(`https://api.weatherapi.com/v1/current.json?key=d578a993838b4c068f970157250105&q=${cityName}&aqi=yes`);
     return await promise.json();
-    
 
 }
 ele.addEventListener('click', async ()=>{
