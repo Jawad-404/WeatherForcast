@@ -83,6 +83,40 @@ button:hover {
   font-size: clamp(14px, 4vw, 16px);
 }
 
+.toggle-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.toggle-buttons button {
+  flex: 1;
+  background-color: #444;
+  color: white;
+  border-radius: 8px;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-buttons button.active {
+  background-color: #00bcd4;
+}
+
+.input-group {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.hidden {
+  display: none;
+}
+
 
 /* Small devices (phones) */
 @media (max-width: 480px) {

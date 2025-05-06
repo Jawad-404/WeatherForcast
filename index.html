@@ -1,25 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Weather Forecasting</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preload" href="wolfgang-hasselmann-bR_-gllg7Bs-unsplash.jpg" as="image" type="image/jpg" fetchpriority="high">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Weather App</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <div class="container">
-        <h1>Weather Forecast</h1>
-        <div>
-          <input id="city" type="text" placeholder="Enter City" />
-          <button id="button">Search</button>
-        </div>
-        <div class="forecast">
-          <h3 id="city-name"></h3>
-          <h5 id="time"></h5>
-          <h5 id="temp"></h5>
-        </div>
-      </div>
-    <script src="script.js"></script>
+  <div class="container">
+    <h1>Weather Info</h1>
+
+    <div class="toggle-buttons">
+      <button id="manual-btn" class="active">Enter City</button>
+      <button id="geo-btn">Use My Location</button>
+    </div>
+
+    <!-- Manual Input -->
+    <div id="manual-form" class="input-group">
+      <input id="city" type="text" placeholder="Enter City" />
+      <button id="search-btn">Search</button>
+    </div>
+
+    <!-- Geolocation -->
+    <div id="geo-form" class="input-group hidden">
+      <button id="get-location-btn">Get Location & Weather</button>
+    </div>
+
+    <!-- Weather Output -->
+    <div class="forecast">
+      <h3 id="city-name"></h3>
+      <h5 id="time"></h5>
+      <h5 id="temp"></h5>
+      <h5 id="condition"></h5> 
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
